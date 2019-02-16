@@ -12,7 +12,7 @@ class App extends Component {
     }
 
     fetchYoutubeAPIData = async ( term ) => {
-        const key = 'AIzaSyBYrcvLJtUOVoOzXKQfLj4cAVeqr4rWilM'
+        // KEY IS ADDED HERE
         const baseUrl = 'https://www.googleapis.com/youtube/v3/search'
 
         const res = await axios.get( `${baseUrl}?part=snippet&q=${term}&type=video&key=${key}&maxResults=10` )
