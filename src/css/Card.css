@@ -1,0 +1,61 @@
+/* Custom Cards */
+.card {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 5px;
+    grid-template-rows: repeat( 3 , minmax( 30px , auto ) );
+    width: 100%;
+    border: solid 0.5px hsla(0, 0%, 6.7%, .05);
+    border-bottom:  solid 5px hsla(0, 0%, 6.7%, .015);
+}
+.card > .header > img {
+    width: 100%;
+    height: 100%;
+}
+
+.card > .content {
+    padding: 0 10px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 5px;
+}
+.card > .content > .title {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+.card > .content > .desc,
+.card > .footer > div  {
+    font-size: 0.75rem;
+    letter-spacing: 1.25px;
+    line-height: 1.44;
+}
+
+.card > .footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    font-style: italic;
+    padding: 0 10px;
+}
+
+.card > .footer > *::before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f017\2002';
+    font-weight: 600px;
+    font-size: 0.75rem;
+}
+.card:hover {
+    border-bottom: solid 5px rgba(	255, 26, 26 , 0.6);
+    cursor: pointer;
+}
+.card:active {
+    -webkit-box-shadow: 0px 2px 10px 0.5px hsla(0, 0%, 6.7%, .6);
+    -moz-box-shadow: 0px 2px 10px 0.5px hsla(0, 0%, 6.7%, .6);
+    box-shadow: 0px 2px 10px 0.5px hsla(0, 0%, 6.7%, .6); 
+}
+.card:focus {
+    outline: none;
+}

@@ -1,0 +1,39 @@
+/* Custom VIdeo Details Component */
+.video-details {
+    display: grid;
+    width: 100%;
+    position: sticky;
+    top: 80px;
+    left: 0;
+    grid-auto-flow: row;
+    grid-gap: 5px;
+    grid-template-rows: repeat( 2 , max-content );
+}
+
+.video-details > .video > iframe {
+    width: 100%;
+    min-height: 600px;
+}
+
+.video-details > .content {
+    padding: 20px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: repeat( 2 , min-content );
+    grid-gap: 5px;
+    border: solid 3px hsla(0, 0%, 6.7%, .1);
+    border-radius: 4px;
+}
+
+
+.video-details > .content > .title {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+.video-details > .content > .desc {
+    font-size: 0.75rem;
+    letter-spacing: 1.25px;
+    line-height: 1.44;
+}

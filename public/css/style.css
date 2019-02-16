@@ -5,6 +5,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     z-index: 0;
+    background: #fff;
 }
 
 a {
@@ -22,112 +23,20 @@ a {
     grid-template-rows: minmax( min-content , max-content ) auto;
 }
 
-/* NAVBAR */
-#root > .wrapper > .nav {
-    display: grid;
-    grid-template-columns: minmax( auto , 250px ) auto minmax( auto , 250px ); 
-    padding: 10px 0;
-    border-bottom: 1px solid hsla(0, 0%, 6.7%, .1);
-    -webkit-box-shadow: 0px 3px 15px 1.5px hsla(0, 0%, 6.7%, .1);
-    -moz-box-shadow: 0px 3px 15px 1.5px hsla(0, 0%, 6.7%, .1);
-    box-shadow: 0px 3px 15px 1.5px hsla(0, 0%, 6.7%, .1);
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    background: white;
-}
-
-#root > .wrapper > .nav > .center {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-/* LEFT-HAND SIDE OF NAVBAR */
-#root > .wrapper > .nav > .left {
-    padding-left: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-#root > .wrapper > .nav > .left > .youtube > a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#root > .wrapper > .nav > .left > .youtube > a> div::before {
-    content:"\2002";
-    font-size: 1.25rem;
-    font-weight: 900;
-}
-#root > .wrapper > .nav > .left > .youtube > a > div {
-    font-weight: 600;
-}
-
-/* SearchBar */
-#root > .wrapper > .nav > .center > form {
-    width: 100%;
-}
-#root > .wrapper > .nav > .center > form > .search-field {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#root > .wrapper > .nav > .center > form > .search-field > * {
-    border: solid 1px hsla(0, 0%, 6.7%, .6);
-    color: hsla(0, 0%, 6.7%, .6);
-    padding: 6px 12px;
-}
-#root > .wrapper > .nav > .center > form > .search-field > input {
-    width: 100%;
-    max-width: 800px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    height: 40px;
-}
-
-#root > .wrapper > .nav > .center > form > .search-field > input:focus {
-    border: blue solid 1px;
-    color: black;
-    outline: none;
-    box-shadow: 0;
-}
-
-#root > .wrapper > .nav > .center > form > .search-field > .search {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    background-color: hsla(0, 0%, 6.7%, .075);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-}
-
-
-/* RIGHT HAND SIDE OF NAVBAR - ICONS */
-#root > .wrapper > .nav > .right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#root > .wrapper > .nav > .right > * {
-    margin: 0 10px;
-}
-
 /* MAIN CONTENT */
 #root > .wrapper > .main {
     display: grid;
     grid-template-columns: minmax( auto , 7fr ) minmax( auto , 3fr);
-    grid-gap: 10px;
+    grid-gap: 30px;
     padding: 20px;
 } 
-#root > .wrapper > .main > .left {
-    min-height: 100vh;
-}
+/* #root > .wrapper > .main > .left {
+    max-height: auto;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+} */
 
 #root > .wrapper > .main > .right {
     min-height: 100vh;
@@ -140,6 +49,7 @@ a {
     grid-gap: 20px;
 }
 
+
 /* ICONS */
 
 .custom-icon {
@@ -151,52 +61,13 @@ a {
     font-size: 30px;
 }
 
-/* Custom Cards */
-
-.card {
-    display: grid;
-    grid-auto-flow: column;
-    grid-gap: 5px;
-    grid-template-rows: repeat( 3 , minmax( 30px , auto ) );
-    width: 100%;
-    border: solid 0.5px hsla(0, 0%, 6.7%, .05);
+.search:active {
+    outline: none;
+    border: none;
+    -webkit-box-shadow: 0px 2px 10px 0.5px hsla(0, 0%, 6.7%, .6);
+    -moz-box-shadow: 0px 2px 10px 0.5px hsla(0, 0%, 6.7%, .6);
+    box-shadow: 0px 2px 10px 0.5px hsla(0, 0%, 6.7%, .6); 
 }
-.card > .header > img {
-    width: 100%;
-    height: 100%;
-}
-
-.card > .content {
-    padding: 0 10px;
-    display: grid;
-    grid-auto-flow: row;
-    grid-gap: 5px;
-}
-.card > .content > .title {
-    font-weight: 600;
-    text-transform: capitalize;
-    font-size: 1rem;
-}
-
-.card > .content > .desc,
-.card > .footer > div  {
-    font-size: 0.75rem;
-    letter-spacing: 1.25px;
-    line-height: 1.44;
-}
-
-.card > .footer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 10px;
-    font-style: italic;
-    padding: 0 10px;
-}
-
-.card > .footer > *::before {
-    font-family: "Font Awesome 5 Free";
-    content: '\f017\2002';
-    font-weight: 600px;
-    font-size: 0.75rem;
+.search:focus {
+    outline: none;    
 }

@@ -17,8 +17,13 @@ class SearchBar extends Component {
         return (
             <form onSubmit={ this.requestResource }>
                 <div className="search-field">
-                    <input type="text" onChange={(e) => this.setState({ value: e.target.value })} placeholder="Search" ></input>
-                    <Search fetchYoutubeAPIData={ this.props.fetchYoutubeAPIData } value={ this.state.value } />
+                    <input 
+                        type="text" 
+                        onChange={(e) => this.setState({ value: e.target.value })} 
+                        placeholder="Search" />
+                    <Search 
+                        fetchYoutubeAPIData={ this.props.fetchYoutubeAPIData } 
+                        value={ this.state.value } />
                 </div>
             </form>
         )

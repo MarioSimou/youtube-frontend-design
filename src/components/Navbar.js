@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+// CSS
+import '../css/Navbar.css';
 // Components
 import { Menu , Youtube , Alert , Video , Comment } from './Icons';
 import SearchBar from './SearchBar';

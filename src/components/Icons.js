@@ -45,13 +45,9 @@ const Comment = (props) => {
     )
 }
 
-const Search = (props) => {
-    const onSeachClick = () => {
-        props.fetchYoutubeAPIData( props.value )
-    }
-
+const Search = ({ value , fetchYoutubeAPIData } ) => {
     return (
-        <div className="search" onClick={ onSeachClick }>
+        <div className="search" onClick={ ( e ) => fetchYoutubeAPIData( value ) } tabIndex="0">
             <i className="fas fa-search"></i>
         </div>
 
