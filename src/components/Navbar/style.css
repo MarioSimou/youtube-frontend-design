@@ -1,0 +1,42 @@
+.navbar {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: minmax( auto , 300px) auto minmax( auto , 300px); 
+    color: hsla(0, 0%, 6.7%, .8);
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+/* left part of navbar */
+.navbar > .left {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat( auto-fit , minmax( 30px , max-content )); 
+    grid-gap: 5px;
+}
+.navbar > .left > * {
+    padding: 6px 10px;
+}
+.navbar > .left > div:last-child > :first-child {
+    color: red;
+}
+.navbar > .left > div:last-child > :last-child{
+    font-weight: 600;
+    color: black;
+}
+
+/* right part of navbar */
+.navbar > .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navbar > .right > * {
+    padding: 6px 10px;
+}
