@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const youtubeSearch = axios.create({
-    baseURL : 'https://www.googleapis.com/youtube/v3',
+    baseURL : 'https://www.googleapis.com/youtube/v3/search',
     params  : {
         part : 'snippet',
         maxResults : 20,
@@ -14,7 +14,7 @@ const youtubeSearch = axios.create({
 })
 
 const youtubeVideo = axios.create({
-    baseURL : 'https://www.googleapis.com/youtube/v3',
+    baseURL : 'https://www.googleapis.com/youtube/v3/videos',
     params  : {
         part : 'snippet',
         maxResults : 20,

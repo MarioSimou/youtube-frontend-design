@@ -16,15 +16,15 @@ class Youtube extends Component {
 
     updateState = async v => {
         // fetch resource
-        const youtubeVideos = await youtubeSearch.get('/search', { params: { q : v } })
+        const youtubeVideos = await youtubeSearch.get('', { params: { q : v } })
         // update state
         this.setState({ videos: youtubeVideos.data.items })
     }
 
     loadVideo = async v => {
         // fetch resource
-        const matchedVideo = await youtubeVideo.get('/videos', { params: { id : v } })
-        const relatedVideos = await youtubeSearch.get('/search', { params: { relatedToVideoId : v  , type : 'video' } })
+        const matchedVideo = await youtubeVideo.get('', { params: { id : v } })
+        const relatedVideos = await youtubeSearch.get('', { params: { relatedToVideoId : v  , type : 'video' } })
         // update state
         this.setState({ videos: [ ...matchedVideo.data.items , ...relatedVideos.data.items.slice( 0 , -1 ) ] })
     }

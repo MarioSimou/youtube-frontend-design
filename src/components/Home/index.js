@@ -16,7 +16,7 @@ class Youtube extends Component {
 
     updateState = async v => {
         // fetch resource
-        const youtubeVideos = await youtubeSearch.get( '/search' , { params : { q : v }})
+        const youtubeVideos = await youtubeSearch.get( '' ,{ params : { q : v }})
         // update state
         this.setState({ videos : youtubeVideos.data.items })
     }
